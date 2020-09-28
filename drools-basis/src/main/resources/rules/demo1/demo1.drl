@@ -1,0 +1,38 @@
+// 规则包需要可kmodule文件下kbase的packages属性保持，否则读取不到
+package demo1
+
+// 导入类
+import com.laher.drools.entity.Customer
+
+// 规则名称，不可重复
+rule isCustomer
+when
+    // 条件：存在Customer对象（Customer不为空）
+    // 条件：消费金额大于0并且小于200
+    c:Customer(money>0 && money<200)
+then
+    // 满足条件执行操作
+    System.out.println("客户叫做："+c.getName()+"，消费金额："+c.getMoney());
+end
+
+// 规则名称，不可重复
+rule isCustomerBigShopping
+when
+    // 条件：存在Customer对象（Customer不为空）
+    // 条件：消费金额大于等于200
+    c:Customer(money>=200)
+then
+    // 满足条件执行操作
+    System.out.println("客户叫做："+c.getName()+"，大额消费："+c.getMoney());
+end
+
+// 规则名称，不可重复
+rule isCustomerNonShopping
+when
+    // 条件：存在Customer对象（Customer不为空）
+    // 条件：消费金额为0
+    c:Customer(money==0)
+then
+    // 满足条件执行操作
+    System.out.println("客户叫做："+c.getName()+"未消费");
+end
