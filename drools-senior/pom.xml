@@ -2,18 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.laher.drools</groupId>
-    <artifactId>drools-basis</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
     <parent>
-        <groupId>com.laher.drools</groupId>
         <artifactId>drools-demo</artifactId>
+        <groupId>com.laher.drools</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
+    <artifactId>drools-senior</artifactId>
 
     <dependencies>
         <dependency>
@@ -25,10 +21,5 @@
             <artifactId>drools-compiler</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
-            <groupId>org.kie.server</groupId>
-            <artifactId>kie-server-client</artifactId>
-        </dependency>
     </dependencies>
-
 </project>
