@@ -8,4 +8,7 @@ kmodule.xml文件是用于选择KIE基础资源并配置这些KIE基础和会话
     <kbase name="kbase1" packages="demo1.*">
         <ksession name="ksession1"/>
     </kbase>
+    <!--<kbase name="kbase2" packages="demo2.*">
+        <ksession name="ksession2"/>
+    </kbase>-->
 </kmodule>

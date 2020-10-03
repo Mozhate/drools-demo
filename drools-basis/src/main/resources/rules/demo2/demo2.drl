@@ -1,0 +1,40 @@
+/** 由站点提供 **/
+//// 规则包需要可kmodule文件下kbase的packages属性保持，否则读取不到
+//package demo2
+//
+//// 导入类
+//import com.laher.drools.entity.Consumption
+//
+//// 结账计算函数
+//function void invoicing(Consumption con){
+//    con.setTotalMoney(con.getMoney() - con.getReduce());
+//}
+//
+//// 规则名称，不可重复
+//rule reduceMini
+//when
+//    // 条件：消费金额大于60，则减少20
+//    $c:Consumption(money>=60)
+//then
+//    $c.setReduce(20);
+//    invoicing($c);
+//end
+//
+//rule reduceMiddle
+//when
+//    // 条件：消费金额大于200，则减少80
+//    $c:Consumption(money>=200)
+//then
+//    $c.setReduce(80);
+//    invoicing($c);
+//end
+//
+//rule reduceBig
+//when
+//    // 条件：消费金额大于800，则减少400
+//    $c:Consumption(money>=800)
+//then
+//    $c.setReduce(400);
+//    invoicing($c);
+//end
+//
