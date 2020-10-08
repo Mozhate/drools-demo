@@ -1,8 +1,0 @@
-<!--
-kmodule.xml文件是用于选择KIE基础资源并配置这些KIE基础和会话的描述文件
-且文件必须放置在Maven项目的resources / META-INF文件夹中
-所有其他Kie构件必须存储在resources文件夹或它下面的任何其他子文件夹中
--->
-<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://www.drools.org/xsd/kmodule">
-</kmodule>
