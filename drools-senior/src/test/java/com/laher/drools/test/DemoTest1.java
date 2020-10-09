@@ -1,7 +1,8 @@
 package com.laher.drools.test;
 
 import com.laher.drools.DroolsSeniorApplication;
-import com.laher.drools.entity.Customer;
+import com.laher.drools.entity.Item;
+import com.laher.drools.entity.Order;
 import com.laher.drools.service.CustomerServices;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,9 +26,15 @@ public class DemoTest1 {
      * 相同类型的产品满足200减30优惠
      */
     @Test
-    public void test1(){
-        customerServices.fire(new Customer("张三", 230));
-        customerServices.fire(new Customer("李四", 0));
-        customerServices.fire(new Customer("王五", 80));
+    public void test1() {
+        // 初始化数据
+        customerServices.test1(generatorOrder());
+    }
+
+    private Order generatorOrder() {
+        Item item1 = new Item("洗发水", "生活类", 60);
+        Item item2 = new Item("瓷碗", "生活类", 140);
+
+        return new Order().add(item1, item2);
     }
 }

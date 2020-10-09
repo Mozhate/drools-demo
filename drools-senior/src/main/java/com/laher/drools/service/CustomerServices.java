@@ -1,7 +1,6 @@
 package com.laher.drools.service;
 
-import com.laher.drools.entity.Customer;
-import org.kie.api.cdi.KSession;
+import com.laher.drools.entity.Order;
 import org.kie.api.runtime.KieSession;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +16,11 @@ public class CustomerServices {
     @Resource
     private KieSession kieSession;
 
-    public void fire(Customer customer) {
-        kieSession.insert(customer);
+    public void test1(Order order) {
+        kieSession.insert(order);
         kieSession.fireAllRules();
+
+        System.out.println(
+            "消费：" + order.getMoney() + "，优惠：" + order.getPreferentialMoney() + "，实际支付：" + order.getActualMoney());
     }
 }
