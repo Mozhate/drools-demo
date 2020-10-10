@@ -24,9 +24,6 @@ public class Order {
     private List<Item> items;
 
     public Order add(Item... items) {
-        Arrays.stream(items).forEach(item -> {
-            money += item.getMoney();
-        });
         this.items = Arrays.asList(items);
         return this;
     }

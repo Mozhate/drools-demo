@@ -28,11 +28,22 @@ public class DemoTest1 {
     @Test
     public void test1() {
         // 初始化数据
-        customerServices.test1(generatorOrder());
+        customerServices.test1(generatorOrder1());
+        customerServices.test1(generatorOrder2());
+        // 输出结果：
+        // 消费：155，优惠：0，实际支付：155
+        // 消费：205，优惠：30，实际支付：175
     }
 
-    private Order generatorOrder() {
-        Item item1 = new Item("洗发水", "生活类", 60);
+    private Order generatorOrder1() {
+        Item item1 = new Item("洗发水", "生活类", 15);
+        Item item2 = new Item("瓷碗", "生活类", 140);
+
+        return new Order().add(item1, item2);
+    }
+
+    private Order generatorOrder2() {
+        Item item1 = new Item("洗发水", "生活类", 65);
         Item item2 = new Item("瓷碗", "生活类", 140);
 
         return new Order().add(item1, item2);
