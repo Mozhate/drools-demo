@@ -10,8 +10,6 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication(scanBasePackages = {"com.laher"})
 @ComponentScan(value = {"com.laher.*.**"})
-//@SpringBootApplication(scanBasePackages = {"com.laher"})
-//@ComponentScan(value = {"com.laher.*.**"},basePackages = {"org.kie.spring.annotations"})
 public class DroolsSeniorApplication {
     public static void main(String[] args) {
         SpringApplication.run(DroolsSeniorApplication.class,args);

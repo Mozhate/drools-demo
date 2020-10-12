@@ -13,14 +13,11 @@ import lombok.Data;
 public class Item {
     /** 名称 **/
     private String name;
-    /** 类型 **/
-    private String type;
     /** 金额 **/
     private Integer money;
 
-    public Item(String name, String type, Integer money) {
+    public Item(String name, Integer money) {
         this.name = name;
-        this.type = type;
         this.money = money;
     }
 

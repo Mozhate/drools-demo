@@ -12,6 +12,7 @@
     <modules>
         <module>drools-basis</module>
         <module>drools-senior</module>
+        <module>drools-spring-boot</module>
     </modules>
 
     <dependencyManagement>

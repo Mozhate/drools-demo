@@ -23,7 +23,7 @@ public class DemoTest1 {
     private CustomerServices customerServices;
 
     /**
-     * 相同类型的产品满足200减30优惠
+     * 满足200减30优惠
      */
     @Test
     public void test1() {
@@ -36,15 +36,15 @@ public class DemoTest1 {
     }
 
     private Order generatorOrder1() {
-        Item item1 = new Item("洗发水", "生活类", 15);
-        Item item2 = new Item("瓷碗", "生活类", 140);
+        Item item1 = new Item("洗发水", 15);
+        Item item2 = new Item("瓷碗", 140);
 
         return new Order().add(item1, item2);
     }
 
     private Order generatorOrder2() {
-        Item item1 = new Item("洗发水", "生活类", 65);
-        Item item2 = new Item("瓷碗", "生活类", 140);
+        Item item1 = new Item("洗发水", 65);
+        Item item2 = new Item("瓷碗", 140);
 
         return new Order().add(item1, item2);
     }
