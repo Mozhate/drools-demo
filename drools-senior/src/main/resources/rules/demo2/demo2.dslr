@@ -1,0 +1,24 @@
+package demo2
+
+import com.laher.drools.entity.Order
+import com.laher.drools.entity.Item
+import com.laher.drools.entity.Discount
+
+rule 无优惠
+when
+    存在订单
+    存在优惠
+    不满足优惠
+then
+    结账
+end
+
+rule 有优惠
+when
+    存在订单
+    存在优惠
+    满足优惠
+then
+    计算优惠
+    结账
+end

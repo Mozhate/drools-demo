@@ -1,6 +1,7 @@
 package com.laher.drools.test;
 
 import com.laher.drools.DroolsSeniorApplication;
+import com.laher.drools.entity.Discount;
 import com.laher.drools.entity.Item;
 import com.laher.drools.entity.Order;
 import com.laher.drools.service.CustomerServices;
@@ -48,4 +49,27 @@ public class DemoTest1 {
 
         return new Order().add(item1, item2);
     }
+
+    /**
+     * 获取优惠
+     * 
+     * @return 结果
+     */
+    private Discount generatorDiscount() {
+        return new Discount(200, 20);
+    }
+
+    /**
+     * 满足200减20优惠
+     */
+    @Test
+    public void test2() {
+        // 初始化数据
+        customerServices.test2(generatorOrder1(), generatorDiscount());
+        customerServices.test2(generatorOrder2(), generatorDiscount());
+        // 输出结果：
+        // 消费：155，优惠：0，实际支付：155
+        // 消费：205，优惠：20，实际支付：185
+    }
+
 }

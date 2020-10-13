@@ -1,5 +1,6 @@
 package com.laher.drools.service;
 
+import com.laher.drools.entity.Discount;
 import com.laher.drools.entity.Item;
 import com.laher.drools.entity.Order;
 import org.kie.api.runtime.KieSession;
@@ -23,5 +24,14 @@ public class CustomerServices {
 
         System.out.println(
             "消费：" + order.getMoney() + "，优惠：" + order.getPreferentialMoney() + "，实际支付：" + order.getActualMoney());
+    }
+
+    public void test2(Order order, Discount discount) {
+        kieSession.insert(order);
+        kieSession.insert(discount);
+        kieSession.fireAllRules();
+
+        System.out.println(
+                "消费：" + order.getMoney() + "，优惠：" + order.getPreferentialMoney() + "，实际支付：" + order.getActualMoney());
     }
 }
