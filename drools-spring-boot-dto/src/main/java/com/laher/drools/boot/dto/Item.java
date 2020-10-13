@@ -1,4 +1,4 @@
-package com.laher.drools.boot.dto;
+package com.laher.drools.boot.model;
 
 /**
  * 物品

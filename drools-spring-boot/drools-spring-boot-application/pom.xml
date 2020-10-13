@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.laher.drools</groupId>
-            <artifactId>drools-spring-boot-dto</artifactId>
+            <artifactId>drools-spring-boot-model</artifactId>
         </dependency>
         <dependency>
             <groupId>org.kie</groupId>

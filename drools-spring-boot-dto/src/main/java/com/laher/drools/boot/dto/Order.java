@@ -1,4 +1,4 @@
-package com.laher.drools.boot.dto;
+package com.laher.drools.boot.model;
 
 import java.util.Arrays;
 import java.util.List;

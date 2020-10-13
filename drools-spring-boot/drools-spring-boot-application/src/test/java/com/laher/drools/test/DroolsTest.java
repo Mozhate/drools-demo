@@ -1,9 +1,9 @@
 package com.laher.drools.test;
 
 import com.laher.drools.boot.DroolsSpringBootApplication;
-import com.laher.drools.boot.dto.Discount;
-import com.laher.drools.boot.dto.Item;
-import com.laher.drools.boot.dto.Order;
+import com.laher.drools.boot.model.Discount;
+import com.laher.drools.boot.model.Item;
+import com.laher.drools.boot.model.Order;
 import com.laher.drools.boot.service.CustomerServices;
 import org.junit.Test;
 import org.junit.runner.RunWith;

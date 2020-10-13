@@ -6,14 +6,13 @@ import org.kie.api.KieServices;
 import org.kie.api.command.Command;
 import org.kie.api.command.KieCommands;
 import org.kie.api.runtime.ExecutionResults;
-import org.kie.api.runtime.KieSession;
 import org.kie.server.api.model.ServiceResponse;
 import org.kie.server.client.KieServicesClient;
 import org.kie.server.client.RuleServicesClient;
 import org.springframework.stereotype.Service;
 
-import com.laher.drools.boot.dto.Discount;
-import com.laher.drools.boot.dto.Order;
+import com.laher.drools.boot.model.Discount;
+import com.laher.drools.boot.model.Order;
 
 import java.util.LinkedList;
 import java.util.List;
