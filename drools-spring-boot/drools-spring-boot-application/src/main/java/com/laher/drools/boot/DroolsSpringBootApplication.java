@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @version 1.0.0
  */
 @SpringBootApplication(scanBasePackages = "com.laher")
-//@ComponentScan(value = {"org.kie.*.**", "com.laher.*.**"})
+@ComponentScan(value = {"org.kie.*.**", "com.laher.*.**"})
 public class DroolsSpringBootApplication {
     public static void main(String[] args) {
         SpringApplication.run(DroolsSpringBootApplication.class, args);

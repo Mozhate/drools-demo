@@ -27,7 +27,7 @@ public class CustomerServices {
     @Resource
     private KieServicesClient kieServicesClient;
 
-    private String containerId = "drools-spring-boot_1.0.0-SNAPSHOT";
+    private final static String CONTAINER_ID = "drools-spring-boot_1.0.0-SNAPSHOT";
 
     public void invoicing(Order order, Discount discount) {
         // 获取规则服务客户端
@@ -41,7 +41,7 @@ public class CustomerServices {
         commands.add(kieCommands.newFireAllRules());
 
         // 规则执行
-        ServiceResponse<ExecutionResults> results = ruleServicesClient.executeCommandsWithResults(containerId,
+        ServiceResponse<ExecutionResults> results = ruleServicesClient.executeCommandsWithResults(CONTAINER_ID,
             kieCommands.newBatchExecution(commands, "ksession1"));
 
         Order res = (Order)results.getResult().getValue("Order");

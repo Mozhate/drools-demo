@@ -16,12 +16,12 @@
         <module>drools-spring-boot-model</module>
     </modules>
 
-    <repositories>
+    <!--<repositories>
         <repository>
             <id>mvn-repo</id>
             <url>https://raw.github.com/Mozhate/maven-repo/master</url>
         </repository>
-    </repositories>
+    </repositories>-->
 
     <dependencyManagement>
         <dependencies>

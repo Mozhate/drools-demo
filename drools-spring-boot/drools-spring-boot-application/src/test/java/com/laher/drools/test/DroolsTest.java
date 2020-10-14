@@ -29,13 +29,14 @@ public class DroolsTest {
 
     @Test
     public void test1() {
-        Item item1 = new Item("洗发水", 15);
-        Item item2 = new Item("瓷碗", 140);
+        Item item1 = new Item("洗发水", 50);
+        Item item2 = new Item("瓷碗", 150);
 
         Order order = new Order().add(item1, item2);
         Discount discount = new Discount(200, 20);
 
         customerServices.invoicing(order, discount);
+        // 消费：200，优惠：20，实际支付：180
     }
 
 }
