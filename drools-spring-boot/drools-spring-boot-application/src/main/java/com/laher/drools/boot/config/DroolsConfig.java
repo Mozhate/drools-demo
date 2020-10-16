@@ -14,15 +14,15 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DroolsConfig {
 
-    private String user = "kieserver";
-    private String password = "kieserver1!";
+    private String USER = "kieserver";
+    private String PWD = "kieserver1!";
+    private String SERVER_URL = "http://192.168.50.44:8180/kie-server/services/rest/server";
 
     @Bean
     @ConditionalOnMissingBean(KieServicesClient.class)
     public KieServicesClient kieServicesClient() {
-        String serverUrl = "http://192.168.50.44:8180/kie-server/services/rest/server";
         KieServicesConfiguration configuration =
-            KieServicesFactory.newRestConfiguration(serverUrl, user, password, 10000L);
+            KieServicesFactory.newRestConfiguration(SERVER_URL, USER, PWD, 10000L);
         configuration.setMarshallingFormat(MarshallingFormat.JSON);
         return KieServicesFactory.newKieServicesClient(configuration);
     }
